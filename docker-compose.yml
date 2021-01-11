@@ -19,6 +19,7 @@ services:
       TS3SERVER_DB_NAME: ${MYSQL_DATABASE}
       TS3SERVER_DB_WAITUNTILREADY: 30
       TS3SERVER_LICENSE: accept
+      TS3SERVER_LICENSEPATH: ${TS3SERVER_LICENSEPATH:-}
     volumes:
       - ./data/ts3server:/var/ts3server
 
