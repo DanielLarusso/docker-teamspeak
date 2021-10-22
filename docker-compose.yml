@@ -21,7 +21,7 @@ services:
       TS3SERVER_LICENSE: accept
       TS3SERVER_LICENSEPATH: ${TS3SERVER_LICENSEPATH:-}
     volumes:
-      - ./data/ts3server:/var/ts3server
+      - ts3server:/var/ts3server
 
   database:
     image: mariadb
@@ -32,4 +32,8 @@ services:
       MYSQL_USER: ${MYSQL_USER}
       MYSQL_PASSWORD: ${MYSQL_PASSWORD}
     volumes:
-      - ./data/mysql:/var/lib/mysql
+      - mysql:/var/lib/mysql
+
+volumes:
+  mysql:
+  ts3server:
